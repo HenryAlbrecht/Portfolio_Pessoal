@@ -1,4 +1,19 @@
-// Mobile Menu Functionality
+/*
+ * Script principal do Portfólio
+ * Aluno: Henrique Albrecht
+ * RU: 4653204
+ * Data: Maio/2025
+ * 
+ * Este arquivo contém todas as funcionalidades JavaScript do site, incluindo:
+ * 1. Menu mobile responsivo
+ * 2. Sistema de navegação suave
+ * 3. Controle de modais dos projetos
+ * 4. Animações de entrada das seções
+ * 5. Formulário de contato
+ * 6. Barra de progresso de rolagem
+ */
+
+// Controle do menu mobile
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -9,7 +24,7 @@ function toggleMenu() {
 
 mobileMenuBtn.addEventListener('click', toggleMenu);
 
-// Close menu when clicking on a link
+// fecha o menu ao clicar em um link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         if (navMenu.classList.contains('active')) {
@@ -18,7 +33,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Close menu when clicking outside
+// fecha o menu ao clicar fora dele
 document.addEventListener('click', (e) => {
     if (navMenu.classList.contains('active') && 
         !e.target.closest('.nav-menu') && 

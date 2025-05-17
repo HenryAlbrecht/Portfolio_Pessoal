@@ -1,3 +1,28 @@
+/*
+    Estilos do Portfólio
+
+    Aluno: Henrique Albrecht
+    RU: 4653204
+    Data: Maio/2025
+    
+    Estrutura do CSS:
+    1. Reset e estilos globais
+    2. Header e Navegação
+    3. Seções principais
+    4. Formulário de Contato
+    5. Cards de projetos
+    6. Modais
+    7. Timeline e Skills
+    8. Media Queries para responsividade
+
+    Paleta de cores:
+    - Fundo principal: #0a192f
+    - Fundo secundário: #112240
+    - Destaque: #64ffda
+    - Texto principal: #e1e1e1
+    - Bordas: #334866
+*/
+
 /* Reset e estilos globais */
 * {
     margin: 0;
@@ -86,7 +111,6 @@ nav a.active {
     border-bottom: 2px solid #64ffda;
 }
 
-/* Sections */
 section {
     padding: 5rem 2rem;
     min-height: 100vh;
@@ -238,7 +262,7 @@ form button:hover {
     background: rgba(100, 255, 218, 0.1);
 }
 
-/* Modal Styles */
+/* Estilos da modal */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -477,7 +501,7 @@ form button:hover {
     margin-bottom: 1rem;
 }
 
-/* Skills Tags */
+/* Tags de habilidades */
 .skills-section {
     margin-top: 4rem;
 }
@@ -504,7 +528,7 @@ form button:hover {
     transform: translateY(-2px);
 }
 
-/* Languages */
+/* lista de Linguagens */
 .language-list {
     margin-top: 1.5rem;
     display: grid;
@@ -543,7 +567,6 @@ form button:hover {
     border: 1px solid #64ffda;
 }
 
-/* Social Links */
 .social-links {
     display: flex;
     gap: 1.5rem;
