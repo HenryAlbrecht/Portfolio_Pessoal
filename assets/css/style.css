@@ -1,0 +1,606 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e1e1e1;
+    background-color: #0a192f;
+}
+
+/* Barra de Progresso */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #64ffda;
+    z-index: 1001;
+    transition: width 0.2s ease-out;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Header e Navegação */
+header {
+    background-color: #112240;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #64ffda;
+    background-color: #233554;
+}
+
+nav a.active {
+    color: #64ffda;
+    border-bottom: 2px solid #64ffda;
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section:nth-child(even) {
+    background-color: #112240;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #64ffda;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Formulário de Contato */
+.form-group {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #e1e1e1;
+    font-size: 1.1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #233554;
+    border: 1px solid #334866;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #e1e1e1;
+    transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #64ffda;
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
+}
+
+textarea {
+    height: 180px;
+    resize: none;
+    min-height: 180px;
+    line-height: 1.6;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8892b0;
+    opacity: 0.7;
+}
+
+form button {
+    background-color: transparent;
+    color: #64ffda;
+    padding: 1rem 3rem;
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    display: block;
+    margin: 3rem auto 0;
+    min-width: 200px;
+}
+
+form button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Cards para projetos */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #233554;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    border: 1px solid #334866;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-color: #64ffda;
+}
+
+.project-card h3 {
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: #112240;
+    color: #64ffda;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #334866;
+}
+
+.card-btn {
+    background: transparent;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.9);
+    z-index: 1000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #112240;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    z-index: 1001;
+    border: 1px solid #334866;
+}
+
+.modal-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.8rem;
+    color: #8892b0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #64ffda;
+}
+
+.modal h2 {
+    color: #64ffda;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.modal-body {
+    color: #e1e1e1;
+}
+
+.modal-body p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.modal-body h3 {
+    color: #64ffda;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.modal-body ul {
+    list-style-position: inside;
+    margin-bottom: 1.5rem;
+}
+
+.modal-body li {
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.modal-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #64ffda;
+    color: #0a192f;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.github-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+}
+
+/* Animação da modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal.active {
+    display: block;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+/* Seção Sobre */
+.profile-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.profile-info {
+    max-width: 800px;
+}
+
+.highlight {
+    color: #64ffda;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.about-description {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.skills-container {
+    margin-top: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-item {
+    background: #233554;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #334866;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+}
+
+.skill-item i {
+    color: #64ffda;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Timeline Formação */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #334866;
+}
+
+.timeline-content {
+    background: #233554;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #334866;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #64ffda;
+    border: 2px solid #0a192f;
+}
+
+.date {
+    color: #64ffda;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.institution {
+    color: #8892b0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills Tags */
+.skills-section {
+    margin-top: 4rem;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.skill-tag {
+    background: #233554;
+    color: #64ffda;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #334866;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Languages */
+.language-list {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.language-item {
+    background: #233554;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #334866;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.language-item:hover {
+    border-color: #64ffda;
+    transform: translateY(-2px);
+}
+
+.language-name {
+    color: #e1e1e1;
+    font-weight: 500;
+}
+
+.level {
+    color: #64ffda;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.8rem;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 12px;
+    border: 1px solid #64ffda;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e1e1e1;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    background: #233554;
+    border: 1px solid #334866;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    border-color: #64ffda;
+    color: #64ffda;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #112240;
+    color: #e1e1e1;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #233554;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+    
+    .skills-tags {
+        justify-content: center;
+    }
+
+    .modal {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .project-card {
+        max-width: none;
+    }
+}

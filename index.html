@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Henrique Albrecht</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="progress-bar"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h1>Sobre Mim</h1>
+            <div class="container">
+                <div class="profile-grid">
+                    <div class="profile-info">
+                        <h2>Henrique Albrecht</h2>
+                        <div class="about-description">
+                            <p>Opa, tudo bem? Seja bem-vindo ao meu perfil. Tenho 21 anos e sou apaixonado pela área de Tecnologia da Informação. Ao longo da minha jornada profissional, explorei diversas vertentes, incluindo Operações, Infraestrutura, Desenvolvimento e Controle de Qualidade (QA).</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/henryferrial/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                        </div>
+                        <div class="skills-container">
+                            <h3>Habilidades</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Front-End</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <span>Design/Artist</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Aplications</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>Back-end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação Educacional</h2>
+            <div class="container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="date">2025 - Cursando</span>
+                            <h3>Bacharelado em Engenharia de Software</h3>
+                            <p class="institution">Uninter</p>
+                            <p class="description">Faculdade de Tecnologia na modalidade EaD.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <div class="technical-skills">
+                        <h3>Conhecimentos Técnicos</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Azure Server</span>
+                        </div>
+                    </div>
+
+                    <div class="languages">
+                        <h3>Idiomas</h3>
+                        <div class="language-list">
+                            <div class="language-item">
+                                <span class="language-name">Português</span>
+                                <span class="level">Nativo</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Inglês</span>
+                                <span class="level">Intermediário</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Japones</span>
+                                <span class="level">Básico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Meu Portfólio</h2>
+            <div class="container">
+                <div class="project-grid">
+                    <div class="project-card" data-modal="project1">
+                        <h3>Portfólio Pessoal</h3>
+                        <p>Website pessoal desenvolvido com HTML, CSS e JavaScript</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <button class="card-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="project-card" data-modal="project2">
+                        <h3>Projeto Apeperia</h3>
+                        <p>Página Simples feito no curso da Alura</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <button class="card-btn">Ver Detalhes</button>
+                    </div>
+
+                    <div class="project-card" data-modal="project3">
+                        <h3>Student API</h3>
+                        <p>Projeto de API Rest-ful</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Postgresql</span>
+                            <span class="tech-tag">Swagger</span>
+                        </div>
+                        <button class="card-btn">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modais -->
+        <div class="modal" id="project1">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Portfólio Pessoal</h2>
+                <div class="modal-body">
+                    <p>Website pessoal desenvolvido como parte do curso de Fundamentos da Programação Web.</p>
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Design responsivo</li>
+                        <li>Animações suaves</li>
+                        <li>Tema escuro moderno</li>
+                        <li>Formulário de contato interativo</li>
+                    </ul>
+                    <h3>Tecnologias Utilizadas:</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="https://github.com/seu-usuario/portfolio" target="_blank" class="github-link">
+                            Ver no GitHub
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="project2">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Projeto Apeperia</h2>
+                <div class="modal-body">
+                    <p>Site Básico Landing Page com Responsividade</p>
+                    <h3>Características:</h3>
+                    <ul></ul>
+                        <li>Responsividade</li>
+                        <li>Design simples e limpo</li>
+                        <li>Primeiro Site desenvolvido</li>
+                        <li>Interface responsiva</li>
+                    </ul>
+                    <h3>Tecnologias Utilizadas:</h3>
+                    <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="https://github.com/HenryAlbrecht/pagina-simples" target="_blank" class="github-link">
+                            Ver no GitHub
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="project3">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Sistema de Notas</h2>
+                <div class="modal-body">
+                    <p>Projeto de API Rest-ful simples com operações CRUD utilizando spring boot swagger-ui e postgresql.</p>
+                    <h3>Características:</h3>
+                    <ul>
+                        <li>Criar dados a partir da API</li>
+                        <li>Ler dados do DB via endpoint</li>
+                        <li>Update de dados no DB</li>
+                        <li>Delete de dados no DB</li>
+                    </ul>
+                    <h3>Tecnologias Utilizadas:</h3>
+                    <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Postgresql</span>
+                            <span class="tech-tag">Swagger</span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="https://github.com/HenryAlbrecht/StudentApi" target="_blank" class="github-link">
+                            Ver no GitHub
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay para o fundo escuro -->
+        <div class="modal-overlay"></div>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Henrique Albrecht. Todos os direitos reservados.
+            <p class="highlight">RU: 4653204</p></p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
