@@ -1,15 +1,31 @@
-// Controle da barra de progresso
-function updateProgressBar() {
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight - windowHeight;
-    const scrolled = window.scrollY;
-    const progressWidth = (scrolled / documentHeight) * 100;
-    document.querySelector('.progress-bar').style.width = `${progressWidth}%`;
+// Mobile Menu Functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+
+function toggleMenu() {
+    mobileMenuBtn.classList.toggle('active');
+    navMenu.classList.toggle('active');
 }
 
-window.addEventListener('scroll', updateProgressBar);
-window.addEventListener('resize', updateProgressBar);
-window.addEventListener('load', updateProgressBar);
+mobileMenuBtn.addEventListener('click', toggleMenu);
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && 
+        !e.target.closest('.nav-menu') && 
+        !e.target.closest('.mobile-menu-btn')) {
+        toggleMenu();
+    }
+});
 
 // Animação das barras de progresso de idiomas
 const observerLanguage = new IntersectionObserver((entries) => {
@@ -146,3 +162,17 @@ function setupModals() {
 
 // Inicializar modais quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', setupModals);
+
+// Controle da barra de progresso
+function updateDesktopProgress() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    const scrolled = window.scrollY;
+    const progressWidth = (scrolled / documentHeight) * 100;
+    
+    document.querySelector('.desktop-progress').style.width = `${progressWidth}%`;
+}
+
+window.addEventListener('scroll', updateDesktopProgress);
+window.addEventListener('resize', updateDesktopProgress);
+window.addEventListener('load', updateDesktopProgress);
